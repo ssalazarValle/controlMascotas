@@ -1,0 +1,28 @@
+mat-sidenav-container {
+  height: calc(208vh - 115vh);
+  width: 100%;
+
+  mat-sidenav {
+    width: 20%;
+    mat-list {
+      mat-list-item {
+        div {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  mat-sidenav-content {
+    flex-wrap: wrap;
+    margin: auto;
+  }
+}
+
+
+.fill-remaining-space {
+  margin: 0% 2%;
+}

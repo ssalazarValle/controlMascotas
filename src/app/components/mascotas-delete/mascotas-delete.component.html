@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Eliminar Mascota</h1>
+<div mat-dialog-content>
+  <p>Desea eliminar el siguiente animal?</p>
+  <div class="data-pet">
+    <p>
+      <strong> Nombre: </strong>
+      {{ mascota.nombre }}
+    </p>
+    <p>
+      <strong> Raza: </strong>
+      {{ mascota.raza }}
+    </p>
+    <p>
+      <strong> Nombre: </strong>
+      {{ mascota.edad }}
+    </p>
+  </div>
+</div>
+<div mat-dialog-content class="content-buttons">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button (click)="deletePet()" cdkFocusInitial>Continuar</button>
+</div>

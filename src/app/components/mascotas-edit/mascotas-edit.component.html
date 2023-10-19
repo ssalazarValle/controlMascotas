@@ -1,0 +1,52 @@
+<div class="content-form">
+  <h1>Editar Mascota</h1>
+
+  <form [formGroup]="mascotaForm">
+    <div>
+      <h5>Nombre de la mascota</h5>
+      <input
+        matInput
+        [(ngModel)]="mascota.nombre"
+        placeholder="Nombre"
+        formControlName="nombre"
+        name="nombre"
+        required
+      />
+    </div>
+
+    <div>
+      <h5>Raza de la mascota</h5>
+      <input
+        matInput
+        [(ngModel)]="mascota.raza"
+        placeholder="Raza"
+        formControlName="raza"
+        name="raza"
+        required
+      />
+    </div>
+
+    <div>
+      <h5>Edad de la mascota</h5>
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="mascota.edad"
+        formControlName="edad"
+        placeholder="Edad"
+        name="edad"
+        required
+      />
+    </div>
+
+    <div>
+      <button
+        type="button"
+        [disabled]="!mascotaForm.valid"
+        (click)="guardarMascota($event)"
+      >
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>

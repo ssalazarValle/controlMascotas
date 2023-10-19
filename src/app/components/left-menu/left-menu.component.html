@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <span class="fill-remaining-space">
+    <button mat-icon-button>
+      <mat-icon (click)="opened = !opened">menu</mat-icon>
+    </button>
+  </span>
+  <span class="fill-remaining-space">Control Mascotas</span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened" mode="side">
+    <mat-list>
+      <mat-list-item (click)="changeTo('/petList')">
+        <div>
+          <mat-icon>
+            pets
+          </mat-icon>
+          <p>
+            Ver Mascotas
+          </p>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+</mat-sidenav-container>
